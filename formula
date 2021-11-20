@@ -27,15 +27,15 @@ end
 o = [(1..9)].map(&:to_a).flatten
 
 loop do
-h1 = (0...2).map { o[rand(o.length)] }.join
-h2 = (0...3).map { o[rand(o.length)] }.join
-h3 = (0...3).map { o[rand(o.length)] }.join
-h4 = (0...2).map { o[rand(o.length)] }.join
+  h1 = (0...2).map { o[rand(o.length)] }.join
+  h2 = (0...3).map { o[rand(o.length)] }.join
+  h3 = (0...3).map { o[rand(o.length)] }.join
+  h4 = (0...2).map { o[rand(o.length)] }.join
 
-b = "#{h1}.#{h2}.#{h3}.#{h4}"
-begin
-  smaki(b)
-rescue Interrupt
-  exit(1)
-end
+  b = "#{h1}.#{h2}.#{h3}.#{h4}"
+  begin
+    smaki(b)
+  rescue Interrupt
+    exit(1)
+  end
 end
