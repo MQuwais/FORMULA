@@ -14,12 +14,12 @@ end
 
 def c(ip)
   results= IPLocate.lookup(ip)
-  print "\033[36m#{results["country"]}\t\t\033[31m#{results["city"]}\n"
+  print "#{results["country"]}\t\t#{results["city"]}\n"
 end
 
 def smaki(ip)
   if is_ip?(ip) == true
-    print "\033[32m#{ip}\t"
+    print "#{ip}\t"
     c(ip)
   else
   end
