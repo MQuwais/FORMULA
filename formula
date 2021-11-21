@@ -27,12 +27,15 @@ end
 o = [(1..9)].map(&:to_a).flatten
 puts "\n\n"
 loop do
-  h1 = (0...3).map { o[rand(o.length)] }.join
+  # sori h1 gua apus
+  # ini berguna buat scan yg kita inginkan aja. soalnya kalo IP nya
+  # ngacak, berarti kita ga puas pake alat yang lu buat ini
   h2 = (0...3).map { o[rand(o.length)] }.join
   h3 = (0...3).map { o[rand(o.length)] }.join
   h4 = (0...2).map { o[rand(o.length)] }.join
 
-  b = "#{h1}.#{h2}.#{h3}.#{h4}"
+  # males bat komen gua 
+  b = "#{ARGV[0]}.#{h2}.#{h3}.#{h4}"
   begin
     smaki(b)
   rescue Interrupt
