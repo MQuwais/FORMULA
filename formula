@@ -25,9 +25,9 @@ def smaki(ip)
   end
 end
 o = [(1..9)].map(&:to_a).flatten
-
+puts "\n\n"
 loop do
-  h1 = (0...2).map { o[rand(o.length)] }.join
+  h1 = (0...3).map { o[rand(o.length)] }.join
   h2 = (0...3).map { o[rand(o.length)] }.join
   h3 = (0...3).map { o[rand(o.length)] }.join
   h4 = (0...2).map { o[rand(o.length)] }.join
@@ -36,6 +36,7 @@ loop do
   begin
     smaki(b)
   rescue Interrupt
+    puts "\n\n"
     exit(1)
   end
 end
